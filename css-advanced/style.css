@@ -1,0 +1,81 @@
+:root {
+    --primary-spacing: 1.5rem;
+}
+
+body {
+    font-size: 1rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, footer {
+    background: #2c3e50;
+    color: white;
+    padding: var(--primary-spacing);
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+a{
+    color: rgb(203, 162, 162);
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(243, 112, 112);
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 15px;
+    padding: var(--primary-spacing);
+    width: 90vw; 
+    margin: 0 auto;
+}
+
+.card {
+    border: 2px solid #333;
+    padding: 2rem;
+    text-align: center;
+    background: #f4f4f4;
+}
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        width: 80vw;
+    }
+    
+    body {
+        font-size: 1.1rem;
+    }
+}
+@media (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+        width: 70vw;
+        gap: 30px;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 5%;
+    }
+}
+
+.form-section {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+footer{
+    margin-top: auto;
+}
