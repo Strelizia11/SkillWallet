@@ -1,0 +1,156 @@
+/* ===== Reset & Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  color: #2d3748;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 16px;
+}
+
+/* ===== App Container ===== */
+.app-container {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 36px 32px;
+  width: 100%;
+  max-width: 520px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Title ===== */
+.app-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 24px;
+  letter-spacing: -0.5px;
+}
+
+/* ===== Input Section ===== */
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.list-input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+  outline: none;
+  color: #2d3748;
+}
+
+.list-input:focus {
+  border-color: #4299e1;
+}
+
+.list-input::placeholder {
+  color: #a0aec0;
+}
+
+/* ===== Add Button ===== */
+.add-btn {
+  padding: 10px 20px;
+  background-color: #4299e1;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.add-btn:hover {
+  background-color: #3182ce;
+}
+
+.add-btn:active {
+  transform: scale(0.97);
+}
+
+/* ===== Error Message ===== */
+.error-message {
+  color: #e53e3e;
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+  padding-left: 4px;
+}
+
+/* ===== Empty State ===== */
+.empty-state {
+  text-align: center;
+  padding: 40px 0 20px;
+  color: #a0aec0;
+  font-size: 0.95rem;
+}
+
+/* ===== List ===== */
+.item-list {
+  list-style: none;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ===== List Item ===== */
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background-color: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  transition: background-color 0.15s;
+}
+
+.list-item:hover {
+  background-color: #ebf4ff;
+}
+
+.item-text {
+  font-size: 0.95rem;
+  color: #2d3748;
+}
+
+/* ===== Remove Button ===== */
+.remove-btn {
+  padding: 5px 12px;
+  background-color: transparent;
+  color: #e53e3e;
+  border: 1.5px solid #e53e3e;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+
+.remove-btn:hover {
+  background-color: #e53e3e;
+  color: #ffffff;
+}
+
+/* ===== Item Count ===== */
+.item-count {
+  margin-top: 20px;
+  font-size: 0.82rem;
+  color: #a0aec0;
+  text-align: right;
+}
