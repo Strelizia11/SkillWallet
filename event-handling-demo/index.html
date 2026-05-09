@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Subtask 2.1: HTML5 boilerplate -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Handling Demo</title>
+
+  <!-- Subtask 2.3: Link CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── HEADER ── -->
+  <header class="header">
+    <h1>Event Handling Demo</h1>
+    <p>// JavaScript DOM Events &mdash; click · input · change · submit · keyup · mouseover · mouseout · focus · blur</p>
+  </header>
+
+  <!-- Subtask 2.2: UI Elements -->
+  <main class="container">
+
+    <!-- ══ CARD 1: click ══ -->
+    <div class="card">
+      <span class="event-tag">click</span>
+      <h2>Click Counter</h2>
+
+      <div class="counter-row">
+        <button class="btn" id="clickBtn"><span>Click Me</span></button>
+        <span class="counter-val" id="counterVal">0</span>
+        <button class="btn btn-danger" id="resetBtn"><span>Reset</span></button>
+      </div>
+
+      <br />
+      <div class="output muted" id="clickOutput">Waiting for a click…</div>
+    </div>
+
+    <!-- ══ CARD 2: keyup ══ -->
+    <div class="card">
+      <span class="event-tag">keyup</span>
+      <h2>Key Detector</h2>
+
+      <label for="keyInput">Type anything below</label>
+      <input type="text" id="keyInput" placeholder="Focus here and press any key…" />
+
+      <br />
+      <div class="key-display">
+        <div class="key-badge" id="keyBadge">—</div>
+        <span class="output muted" id="keyName" style="flex:1; min-height:auto; padding: 0.4rem 0.6rem;">No key pressed yet</span>
+      </div>
+    </div>
+
+    <!-- ══ CARD 3: input & change ══ -->
+    <div class="card">
+      <span class="event-tag">input &amp; change</span>
+      <h2>Live Input &amp; Select</h2>
+
+      <label for="liveInput">Type something (input event)</label>
+      <input type="text" id="liveInput" placeholder="Start typing…" />
+      <div class="output muted" id="liveOutput" style="margin-top:0.5rem; margin-bottom:1rem;">…waiting for input</div>
+
+      <label for="colorSelect">Pick a color (change event)</label>
+      <select id="colorSelect">
+        <option value="">— choose a color —</option>
+        <option value="Red">Red</option>
+        <option value="Green">Green</option>
+        <option value="Blue">Blue</option>
+        <option value="Purple">Purple</option>
+        <option value="Orange">Orange</option>
+      </select>
+      <div class="output muted" id="changeOutput" style="margin-top:0.5rem;">No color selected yet.</div>
+    </div>
+
+    <!-- ══ CARD 4: mouseover / mouseout ══ -->
+    <div class="card">
+      <span class="event-tag">mouseover &amp; mouseout</span>
+      <h2>Hover Detection</h2>
+
+      <div class="hover-box" id="hoverBox">Hover over me</div>
+      <div class="output muted" id="hoverOutput">Mouse has not entered yet.</div>
+    </div>
+
+    <!-- ══ CARD 5: focus / blur ══ -->
+    <div class="card">
+      <span class="event-tag">focus &amp; blur</span>
+      <h2>Focus &amp; Blur</h2>
+
+      <label for="focusInput1">First Name</label>
+      <input type="text" id="focusInput1" placeholder="Click to focus…" style="margin-bottom:0.75rem;" />
+
+      <label for="focusInput2">Last Name</label>
+      <input type="text" id="focusInput2" placeholder="Click to focus…" style="margin-bottom:0.75rem;" />
+
+      <div class="output muted" id="focusOutput">No field focused yet.</div>
+    </div>
+
+    <!-- ══ CARD 6: submit ══ -->
+    <div class="card">
+      <span class="event-tag">submit</span>
+      <h2>Form Submission</h2>
+
+      <form id="demoForm" novalidate>
+        <div class="form-group">
+          <label for="formName">Name *</label>
+          <input type="text" id="formName" placeholder="Your name" required />
+        </div>
+        <div class="form-group">
+          <label for="formEmail">Email *</label>
+          <input type="email" id="formEmail" placeholder="you@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="formMsg">Message (optional)</label>
+          <textarea id="formMsg" placeholder="Say something…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-secondary" style="width:100%"><span>Submit Form</span></button>
+      </form>
+
+      <br />
+      <div class="success-msg" id="formSuccess"></div>
+    </div>
+
+    <!-- ══ EVENT LOG (full width) ══ -->
+    <div class="card full-width">
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.75rem;">
+        <div>
+          <span class="event-tag" style="margin-bottom:0;">system</span>
+          <h2 style="display:inline; margin-left:0.5rem;">Live Event Log</h2>
+        </div>
+        <button class="btn btn-danger" id="clearLogBtn" style="font-size:0.7rem; padding:0.4rem 0.8rem;"><span>Clear</span></button>
+      </div>
+
+      <div class="log-box" id="logBox">
+        <!-- Log entries injected by script.js -->
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Subtask 2.3: Link JavaScript (defer keeps HTML parsed first) -->
+  <script src="script.js" defer></script>
+</body>
+</html>
